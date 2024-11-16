@@ -25,7 +25,7 @@ const  Layout = ({ children }: DefualtLayoutProps) => {
               </div>
             </div>
 
-            <div className=" w-full  overflow-y-auto lg:h-[84vh] pb-20 h-[70vh] hide-scrollbar">
+            <div className=" w-full  overflow-y-auto lg:h-[84vh] pb-20 h-[80vh] hide-scrollbar">
               {children}
             </div>
           </div>

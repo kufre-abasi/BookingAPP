@@ -100,7 +100,7 @@ const ActivitiesSection = () => {
                     </div>
                   </div>
                   <div className="border-b flex lg:flex-row flex-col lg:px-4 px-0 justify-between lg:items-center border-b-[#E4E7EC] p-4">
-                    <div className="flex flex-row  gap-[8px]">
+                    <div className="flex lg:flex-row flex-wrap  gap-[8px]">
                       <p className="text-[#647995] leading-[26px] text-[14px]">
                         What's Included:{' '}
                       </p>
