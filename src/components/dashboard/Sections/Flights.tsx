@@ -54,7 +54,7 @@ const FlightsSection = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex lg:flex-row px-5 flex-col items-center gap-[16px]">
+                  <div className="flex lg:flex-row px-5 flex-col justify-center items-center gap-[16px]">
                     <div className="flex flex-col items-center">
                       <p className="text-[14px] text-[#1D2433] font-medium">
                         08:35
@@ -71,7 +71,7 @@ const FlightsSection = () => {
                       </div>
                       <div className="w-full">
                         {' '}
-                        <div className="lg:w-[25vh] w-[90vh] h-[8px] bg-[#E7F0FF] flex items-center justify-center rounded-[8px]">
+                        <div className="lg:w-[25vh] w-[40vh] h-[8px] bg-[#E7F0FF] flex items-center justify-center rounded-[8px]">
                           {' '}
                           <div className="lg:w-[5vh] w-[10vh] h-[8px] bg-[#0D6EFD] rounded-[8px]"></div>
                         </div>
