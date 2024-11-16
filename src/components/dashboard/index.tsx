@@ -3,6 +3,7 @@ import BannerSection from '@/components/dashboard/Sections/BannerSection';
 import ArrowRightIcon from '@/components/ui/Icons/ArrowRight';
 import CalenderIcon from '@/components/ui/Icons/Calender';
 import FlightsSection from '@/components/dashboard/Sections/Flights';
+import HotelsSection from '@/components/dashboard/Sections/Hotels'; 
 const Home = () => {
 
   return (
@@ -71,7 +72,7 @@ const Home = () => {
             </button>
           </div>{' '}
         </div>
-        <div><FlightsSection /></div>
+        <div className='flex flex-col gap-4'><FlightsSection /><HotelsSection /></div>
       </div>
     </>
   );

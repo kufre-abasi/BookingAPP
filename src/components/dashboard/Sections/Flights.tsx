@@ -8,6 +8,8 @@ import FilmSlateIcon from '@/components/ui/Icons/FilmSlate';
 import SuitcaseRollingsIcon from '@/components/ui/Icons/SuitcaseRollings';
 import AirplaneLandingIcon from '@/components/ui/Icons/AirplaneLanding';
 import AirplaneTakeoffIcon from '@/components/ui/Icons/AirplaneTakeoff';
+import CurrencyNgnIcon from '@/components/ui/Icons/CurrencyNgn';
+
 const FlightsSection = () => {
   return (
     <>
@@ -31,7 +33,7 @@ const FlightsSection = () => {
             </button>
           </div>{' '}
           <div className="flex flex-col gap-[24px]">
-            <div className=" flex rounded-[4px] overflow-hidden bg-[#FFFFFF]">
+            <div className=" flex lg:flex-row flex-col rounded-[4px] overflow-hidden bg-[#FFFFFF]">
               <div className="w-full ">
                 <div className="border-b flex lg:flex-row flex-col px-4 justify-between items-center border-b-[#E4E7EC] p-4">
                   <div className="flex lg:flex-row flex-col gap-[16px] items-center">
@@ -93,8 +95,8 @@ const FlightsSection = () => {
                       <p className="text-[14px] text-[#676E7E]">Sun, 20 Aug</p>
                     </div>
                   </div>
-                  <div className="text-[#1D2433] text-[28px] font-semibold">
-                    N 123,450.00
+                  <div className="text-[#1D2433] flex gap-[6px] items-center text-[28px] font-semibold">
+                    <CurrencyNgnIcon /> 123,450.00
                   </div>
                 </div>
                 <div className="border-b border-b-[#E4E7EC] p-4">
