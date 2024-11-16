@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ArrowLeftBoxIcon from '@/components/ui/Icons/ArrowLeftBox';
 import WarehouseIcon from '@/components/ui/Icons/Warehouse';
 import XIcon from '@/components/ui/Icons/XIcon';
@@ -12,8 +12,15 @@ import CurrencyNgnIcon from '@/components/ui/Icons/CurrencyNgn';
 import CalenderIcon from '@/components/ui/Icons/Calender';
 import SwimmingPoolIcon from '@/components/ui/Icons/SwimmingPool';
 import WineIcon from '@/components/ui/Icons/Wine';
+import HotelsModal from '@/components/ui/modal/HotelsModal';
 
 const HotelsSection = () => {
+  const [showModal, setModal] = useState(false);
+
+  const handleToggleModal = () => {
+    setModal((showModal) => !showModal);
+  };
+
   return (
     <>
       <div className=" ">
@@ -23,7 +30,10 @@ const HotelsSection = () => {
             <h3 className="text-[#fff] text-[18px] flex gap-[10px] items-center leading-[28px] font-semibold">
               <WarehouseIcon /> Hotels{' '}
             </h3>
-            <button className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-fit text-[#1D2433] px-4 py-2 font-normal flex items-center justify-center gap-3">
+            <button
+              onClick={handleToggleModal}
+              className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-fit text-[#1D2433] px-4 py-2 font-normal flex items-center justify-center gap-3"
+            >
               Add Hotels{' '}
             </button>
           </div>{' '}
@@ -149,6 +159,7 @@ const HotelsSection = () => {
           </div>
         </div>
       </div>
+      {showModal && <HotelsModal handleToggle={handleToggleModal} />}
     </>
   );
 };

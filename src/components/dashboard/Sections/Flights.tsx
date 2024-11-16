@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ArrowLeftBoxIcon from '@/components/ui/Icons/ArrowLeftBox';
 import AirplaneInFlightIcon from '@/components/ui/Icons/AirplaneInFlight';
 import XIcon from '@/components/ui/Icons/XIcon';
@@ -9,8 +9,15 @@ import SuitcaseRollingsIcon from '@/components/ui/Icons/SuitcaseRollings';
 import AirplaneLandingIcon from '@/components/ui/Icons/AirplaneLanding';
 import AirplaneTakeoffIcon from '@/components/ui/Icons/AirplaneTakeoff';
 import CurrencyNgnIcon from '@/components/ui/Icons/CurrencyNgn';
+import HotelsModal from '@/components/ui/modal/HotelsModal';
 
 const FlightsSection = () => {
+  const [showModal, setModal] = useState(false);
+
+  const handleToggleModal = () => {
+    setModal((showModal) => !showModal);
+  };
+
   return (
     <>
       <div className=" pt-20 ">
@@ -28,7 +35,10 @@ const FlightsSection = () => {
             <h3 className="text-[#1D2433] text-[18px] flex gap-[10px] items-center leading-[28px] font-semibold">
               <AirplaneInFlightIcon /> Flights{' '}
             </h3>
-            <button className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-fit text-[#0D6EFD] px-4 py-2 font-normal flex items-center justify-center gap-3">
+            <button
+              onClick={handleToggleModal}
+              className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-fit text-[#0D6EFD] px-4 py-2 font-normal flex items-center justify-center gap-3"
+            >
               Add Flights{' '}
             </button>
           </div>{' '}
@@ -143,6 +153,7 @@ const FlightsSection = () => {
           </div>
         </div>
       </div>
+      {showModal && <HotelsModal handleToggle={handleToggleModal} />}
     </>
   );
 };

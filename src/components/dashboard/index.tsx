@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BannerSection from '@/components/dashboard/Sections/BannerSection';
 import ArrowRightIcon from '@/components/ui/Icons/ArrowRight';
 import CalenderIcon from '@/components/ui/Icons/Calender';
 import FlightsSection from '@/components/dashboard/Sections/Flights';
 import HotelsSection from '@/components/dashboard/Sections/Hotels'; 
 import ActivitiesSection from '@/components/dashboard/Sections/Activities';
+import HotelsModal from '@/components/ui/modal/HotelsModal';
 const Home = () => {
+    const [showModal, setModal] = useState(false);
+
+    const handleToggleModal = () => {
+      setModal((showModal) => !showModal);
+    };
 
   return (
     <>
@@ -38,7 +44,10 @@ const Home = () => {
                 planner.
               </p>
             </div>
-            <button className="border-none justify-center text-[14px] bg-brand rounded-[4px] text-center text-white px-4 py-2 font-normal flex items-center gap-3">
+            <button
+              onClick={handleToggleModal}
+              className="border-none justify-center text-[14px] bg-brand rounded-[4px] text-center text-white px-4 py-2 font-normal flex items-center gap-3"
+            >
               Add Activities{' '}
             </button>
           </div>
@@ -53,7 +62,10 @@ const Home = () => {
                 planner.
               </p>
             </div>
-            <button className="border-none justify-center text-[14px] bg-brand rounded-[4px] text-center text-white px-4 py-2 font-normal flex items-center gap-3">
+            <button
+              onClick={handleToggleModal}
+               className="border-none justify-center text-[14px] bg-brand rounded-[4px] text-center text-white px-4 py-2 font-normal flex items-center gap-3"
+            >
               Add Hotels{' '}
             </button>
           </div>{' '}
@@ -68,13 +80,21 @@ const Home = () => {
                 planner.
               </p>
             </div>
-            <button className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-full text-[#0D6EFD] px-4 py-2 font-normal flex items-center justify-center gap-3">
+            <button
+              onClick={handleToggleModal}
+              className="border-none bg-[#FFFFFF] rounded-[4px] text-[14px] text-center w-full text-[#0D6EFD] px-4 py-2 font-normal flex items-center justify-center gap-3"
+            >
               Add Flights{' '}
             </button>
           </div>{' '}
         </div>
-        <div className='flex flex-col gap-4'><FlightsSection /><HotelsSection /><ActivitiesSection /></div>
+        <div className="flex flex-col gap-4">
+          <FlightsSection />
+          <HotelsSection />
+          <ActivitiesSection />
+        </div>
       </div>
+      {showModal && <HotelsModal handleToggle={handleToggleModal} />}
     </>
   );
 };
