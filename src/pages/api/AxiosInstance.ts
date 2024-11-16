@@ -1,36 +1,24 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
-import { decrypt, encrypt } from '~/service/encryption';
 
+const options = {
+  method: 'GET',
+  url: 'https://booking-com15.p.rapidapi.com/api/v1/attraction/searchAttractions',
+  params: {
+    id: 'eyJ1ZmkiOi0yMDkyMTc0fQ==',
+    sortBy: 'trending',
+    page: '1',
+    currency_code: 'INR',
+    languagecode: 'en-us'
+  },
+  headers: {
+    'x-rapidapi-key': '558ebf66bemshe6714643ab3108cp1c2522jsn12e0690dd16f',
+    'x-rapidapi-host': 'booking-com15.p.rapidapi.com'
+  }
+};
 
-// Create an Axios instance
-const axiosInstance = axios.create({
-  baseURL: 'https://fakestoreapi.com/'
-  // Replace with your actual base URL
-});
-
-// Optional: Add an interceptor to include authorization token in requests
-axiosInstance.interceptors.request.use((config) => {
-    const user = decrypt(Cookies.get('token'));
-    if (user) {
-        config.headers.Authorization = `Bearer ${user}`;
-    }
-    return config;
-});
-
-// Interceptor for handling errors globally
-axiosInstance.interceptors.response.use(
-    response => response,
-    error => {
-        const { status } = error.response;
-        if (status === 401) {
-
-        } else if (status === 500) {
-            // Handle server errors
-            console.error('Server Error');
-        }
-        return Promise.reject(error);
-    }
-);
-
-export default axiosInstance;
+try {
+  const response = await axios.request(options);
+  console.log(response.data);
+} catch (error) {
+  console.error(error);
+}
