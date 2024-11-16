@@ -104,3 +104,8 @@ a{
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+.orange-tag {
+  color: #7A4504 !important;
+  background-color: #FEF4E6 !important;
+}
+

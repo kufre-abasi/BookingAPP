@@ -3,11 +3,11 @@ import Layout from "@/components/layouts";
 
 
 export default function LoginPage() {
-  return (
+  return(
     <div>
       <Layout>
-        <div>{/* <Home/ > */}</div>
+        <Home/ >
       </Layout>
     </div>
-  );
+  )
 }
