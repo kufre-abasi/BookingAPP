@@ -1,7 +1,7 @@
 import pkg from 'crypto-js';
 const { AES, enc } = pkg;
 
-const $key: string =  'Hivvey@1234$';
+const $key: string =  'test@1234$';
 // const $key: string = (import.meta as any).env.NEXT_PUBLIC_ENCRYPT_KEY ?? 'Hivvey@1234$';
 
 export const encrypt = (data:any) => {
