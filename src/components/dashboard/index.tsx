@@ -25,7 +25,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex lg:flex-row flex-col gap-2">
-          <div className="bg-[#000031] p-[20px] flex flex-col justify-between rounded-[4px] max-w-[270px] min-h-[209px] max-h-[209px] min-w-[270px]">
+          <div className="bg-[#000031] p-[20px] flex flex-col w-full justify-between rounded-[4px] lg:max-w-[270px] min-h-[209px] max-h-[209px] lg:min-w-[270px]">
             <div className="flex flex-col gap-3">
               {' '}
               <h3 className="text-[#FFFFFF] text-[16px] leading-[24px] font-semibold">
@@ -40,7 +40,7 @@ const Home = () => {
               Add Activities{' '}
             </button>
           </div>
-          <div className="bg-[#E7F0FF] p-[20px] flex flex-col justify-between rounded-[4px] max-w-[270px] min-h-[209px] max-h-[209px] min-w-[270px]">
+          <div className="bg-[#E7F0FF] p-[20px] flex flex-col w-full justify-between rounded-[4px] lg:max-w-[270px] min-h-[209px] max-h-[209px] lg:min-w-[270px]">
             <div className="flex flex-col gap-3">
               {' '}
               <h3 className="text-black text-[16px] leading-[24px] font-semibold">
@@ -55,7 +55,7 @@ const Home = () => {
               Add Hotels{' '}
             </button>
           </div>{' '}
-          <div className="bg-[#0D6EFD] p-[20px] flex flex-col justify-between rounded-[4px] max-w-[270px] min-h-[209px] max-h-[209px] min-w-[270px]">
+          <div className="bg-[#0D6EFD] p-[20px] flex flex-col w-full justify-between rounded-[4px] lg:max-w-[270px] min-h-[209px] max-h-[209px] lg:min-w-[270px]">
             <div className="flex flex-col gap-3">
               {' '}
               <h3 className="text-[#FFFFFF] text-[16px] leading-[24px] font-semibold">
